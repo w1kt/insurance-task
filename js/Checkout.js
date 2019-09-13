@@ -21,11 +21,11 @@ class Checkout {
       return acc + currPolicy(this.cart);
     }, 0);
     const grossPrice = this.cart.reduce((acc, curr) => acc + curr.price, 0);
-    const total = grossPrice - totalDiscount;
-    const totalFormatted = `$${total.toFixed(2)}`;
+    const netPrice = grossPrice - totalDiscount;
+    const netPriceFormatted = `$${netPrice.toFixed(2)}`;
     this.print(`Total Discount: $${totalDiscount}`);
-    this.print(`Total Cost: ${totalFormatted}\n\n`);
-    return totalFormatted;
+    this.print(`Total Cost: ${netPriceFormatted}\n\n`);
+    return netPriceFormatted;
   }
   /**
    * Clears the cart
