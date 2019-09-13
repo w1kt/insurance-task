@@ -1,0 +1,51 @@
+IAG is starting a computer company. You have been engaged to build the checkout system. We will start with the following products in our catalogue
+
+
+| SKU     | Name             | Price    |
+| --------|:----------------:| --------:|
+| homi    | Home Insurance   | $549.99  |
+| heai    | Health Insurance | $1399.99 |
+| cari    | Car Insurance    | $109.50  |
+| peti    | Pet Insurance    | $30.00   |
+
+As we're launching our new Insurance company, we would like to have a multi policy specials.
+
+- we're going to have a 3 for 2 deal on Car Insurance. For example, if you buy 3 Car Insurance, you will pay the price of 2 only
+- the Home Insurance will have a bulk discounted applied, where the price will drop to $499.99 each, if someone buys more than 4
+- we will bundle free Pet Insurance, with every Health Insurance sold
+
+As our Sales manager is quite indecisive, we want the pricing rules to be as flexible as possible as they can change in the future with little notice.
+
+Our checkout system can scan items in any order.
+
+The interface to our checkout looks like this (shown in java):
+
+```java
+  Checkout co = new Checkout(pricingRules);
+  co.scan(item1);
+  co.scan(item2);
+  co.total();
+```
+
+Your task is to implement a checkout system that fulfils the requirements described above.
+
+Example scenarios
+-----------------
+
+SKUs Scanned: cari, cari, cari, peti
+Total expected: $249.00
+
+SKUs Scanned: cari, homi, homi, cari, homi, homi, homi
+Total expected: $2718.95
+
+SKUs Scanned: heai, peti, homi
+Total expected: $1949.98
+
+Notes on implementation:
+
+- use ONLY Javascript to complete this exercise 
+- try not to spend more than 2 hours maximum. (We don't want you to lose a weekend over this!)
+- don't build guis etc, we're more interested in your approach to solving the given task, not how shiny it looks
+- don't worry about making a command line interface to the application
+
+When you've finished, zip up your solution and send it to Peter.Jadrijevic@iag.com.au Good Luck!
